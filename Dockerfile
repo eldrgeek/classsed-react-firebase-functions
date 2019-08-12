@@ -12,7 +12,7 @@ RUN apt-get install libgtk-3-dev
 
 # Setup postgres server for user gitpod
 USER gitpod
-RUN npm install -g firebase-tools
+# RUN npm install -g firebase-tools
 # ENV PATH="/usr/lib/postgresql/10/bin:$PATH"
 # RUN mkdir -p ~/pg/data; mkdir -p ~/pg/scripts; mkdir -p ~/pg/logs; mkdir -p ~/pg/sockets; initdb -D pg/data/
 # RUN echo '#!/bin/bash\n\
