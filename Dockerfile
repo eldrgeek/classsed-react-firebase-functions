@@ -5,13 +5,11 @@ RUN wget https://dl.pstmn.io/download/latest/linux64 -O postman-linux-x64.tar.gz
     && sudo ln -s /opt/Postman/Postman /usr/bin/postman \
     && rm postman-linux-x64.tar.gz
 
-RUN apt-get update && apt-get install -y \
-        libgtk-3-0 \
-    && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
+# svar/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 
 # Setup postgres server for user gitpod
 USER gitpod
-# RUN npm install -g firebase-tools
+RUN npm install -g firebase-tools
 # ENV PATH="/usr/lib/postgresql/10/bin:$PATH"
 # RUN mkdir -p ~/pg/data; mkdir -p ~/pg/scripts; mkdir -p ~/pg/logs; mkdir -p ~/pg/sockets; initdb -D pg/data/
 # RUN echo '#!/bin/bash\n\
