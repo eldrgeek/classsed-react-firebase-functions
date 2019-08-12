@@ -5,10 +5,10 @@ RUN wget https://dl.pstmn.io/download/latest/linux64 -O postman-linux-x64.tar.gz
     && sudo ln -s /opt/Postman/Postman /usr/bin/postman \
     && rm postman-linux-x64.tar.gz
 RUN apt install libgtk-3-0
-# RUN apt-get update && apt-get install -y \
-#         postgresql \
+RUN apt-get update && apt-get install -y \
+        libgtk-3-0 \
 #         postgresql-contrib \
-#     && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
+    && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 
 # Setup postgres server for user gitpod
 USER gitpod
